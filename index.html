@@ -3,82 +3,95 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <title>HALYPO: Heterogeneous-Agent Lyapunov Policy Optimization for Human-Robot Collaboration</title>
-  <meta name="title" content="HALYPO: Heterogeneous-Agent Lyapunov Policy Optimization for Human-Robot Collaboration">
-  <meta name="description" content="HALYPO establishes formal stability in policy-parameter space for human-robot collaboration using Lyapunov certification to stabilize decentralized learning.">
-  <meta name="keywords" content="Human-Robot Collaboration, Multi-Agent Reinforcement Learning, Lyapunov Stability, Heterogeneous Agents, Policy Optimization">
-  <meta name="author" content="Hao Zhang, Yaru Niu, Yikai Wang, Ding Zhao, H. Eric Tseng">
+  <title>HALYPO: Learning Human-Robot Collaboration via Heterogeneous-Agent Lyapunov Policy Optimization</title>
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
+    body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #363636; }
+    .publication-title { font-weight: 800; margin-bottom: 1rem !important; }
+    
+    /* Global Teaser Video */
+    .teaser-video-container {
+      max-width: 1000px;
+      margin: 0 auto 3rem auto;
+    }
+    .teaser-video-container video {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    /* Video Grid: 2 per row */
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
       margin-top: 2rem;
     }
     .video-item {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
       text-align: center;
     }
-    .video-item video {
+    .video-item video { width: 100%; border-radius: 6px; }
+    .video-caption { margin-top: 8px; font-weight: 600; font-size: 0.9rem; }
+
+    /* Single Column Figures */
+    .figure-block {
+      margin-bottom: 5rem;
+      text-align: center;
+    }
+    .figure-block img {
       width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 900px;
+      height: auto;
+      margin-bottom: 20px;
     }
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+    .figure-description {
+      text-align: justify;
+      background: #f8fafc;
+      padding: 25px;
+      border-left: 4px solid #2563eb;
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
     }
-    .image-item img {
-      width: 100%;
-      border-radius: 8px;
-    }
+
+    .section-title { font-weight: 700; margin-bottom: 2rem !important; }
   </style>
 </head>
 <body>
 
 <section class="hero">
   <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">HALYPO: Heterogeneous-Agent Lyapunov Policy Optimization for Human-Robot Collaboration</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">Hao Zhang<sup>1,2</sup>,</span>
-            <span class="author-block">Yaru Niu<sup>2</sup>,</span>
-            <span class="author-block">Yikai Wang<sup>2</sup>,</span>
-            <span class="author-block">Ding Zhao<sup>2</sup>,</span>
-            <span class="author-block">H. Eric Tseng<sup>1</sup></span>
-          </div>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Ford Motor Company, <sup>2</sup>Carnegie Mellon University</span>
-          </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Code</span>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
+    <div class="container is-max-desktop has-text-centered">
+      <h1 class="title is-1 publication-title">Learning Human-Robot Collaboration via Heterogeneous-Agent Lyapunov Policy Optimization</h1>
+      <div class="is-size-5 publication-authors">
+        <span class="author-block">Hao Zhang<sup>1,2</sup>, Yaru Niu<sup>2</sup>, Yikai Wang<sup>2</sup>, Ding Zhao<sup>2</sup>, H. Eric Tseng<sup>1</sup></span>
       </div>
+      <div class="is-size-6 mt-2">
+        <span><sup>1</sup>Ford Motor Company, <sup>2</sup>Carnegie Mellon University</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section pt-0">
+  <div class="container is-max-desktop">
+    <div class="teaser-video-container">
+      <video autoplay muted loop controls>
+        <source src="static/videos/main_teaser.mp4" type="video/mp4">
+      </video>
+      <p class="has-text-centered mt-3 is-size-6 has-text-grey">
+        Overall demonstration of HALYPO in high-dimensional human-robot interaction tasks.
+      </p>
     </div>
   </div>
 </section>
@@ -90,7 +103,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            To improve generalization and resilience in human-robot collaboration (HRC), robots must handle the combinatorial diversity of human behaviors and contexts. We propose <strong>Heterogeneous-Agent Lyapunov Policy Optimization (HALYPO)</strong>, which establishes formal stability directly in the policy-parameter space by enforcing a per-step Lyapunov decrease condition. Unlike traditional methods, HALYPO rectifies decentralized gradients via optimal quadratic projections, ensuring monotonic contraction of the rationality gap and enabling effective exploration of open-ended interaction spaces. 
+            To improve generalization and resilience in human-robot collaboration (HRC), robots must handle the combinatorial diversity of human behaviors and contexts. We propose <strong>Heterogeneous-Agent Lyapunov Policy Optimization (HALYPO)</strong>, which establishes formal stability directly in the policy-parameter space by enforcing a per-step Lyapunov decrease condition on a parameter-space disagreement metric. Unlike Lyapunov-based safe RL, HALYPO uses Lyapunov certification to stabilize decentralized policy learning. Our method ensures monotonic contraction of the rationality gap and enables effective exploration of open-ended interaction spaces. Extensive simulations and real-world humanoid-robot experiments demonstrate superior stability and performance compared to state-of-the-art MARL baselines.
           </p>
         </div>
       </div>
@@ -100,23 +113,33 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Methodology & Framework</h2>
-    <div class="image-grid">
-      <div class="image-item">
-        <img src="static/images/fig1.jpg" alt="Framework Overview">
-        <p class="subtitle is-6">HALYPO Framework Overview</p>
+    <h2 class="title is-3 section-title has-text-centered">Methodology & Framework</h2>
+    
+    <div class="figure-block">
+      <img src="static/images/framework.jpg" alt="HALYPO Framework">
+      <div class="figure-description">
+        <strong>Figure 1: Overview of the HALYPO Framework.</strong> The architecture illustrates how heterogeneous agents (Human Proxy and Robot) interact within a decentralized environment. HALYPO introduces a Lyapunov-based projection layer that rectifies decentralized gradients, ensuring stable convergence towards the cooperative Nash equilibrium even under highly stochastic human behaviors.
       </div>
-      <div class="image-item">
-        <img src="static/images/fig2.jpg" alt="Lyapunov Stability">
-        <p class="subtitle is-6">Lyapunov Parameter-Space Stability</p>
+    </div>
+
+    <div class="figure-block">
+      <img src="static/images/stability_proof.jpg" alt="Stability Proof">
+      <div class="figure-description">
+        <strong>Figure 2: Parameter-Space Stability Analysis.</strong> Comparison of learning dynamics between standard IPPO and HALYPO. While independent updates often lead to oscillations in the Rationality Gap (RG), our Lyapunov descent condition forces a monotonic decrease in policy disagreement, leading to smoother and faster convergence in complex differentiable games.
       </div>
-      <div class="image-item">
-        <img src="static/images/fig3.jpg" alt="Experiment Setup">
-        <p class="subtitle is-6">Human-Robot Interaction Setup</p>
+    </div>
+
+    <div class="figure-block">
+      <img src="static/images/sim_setup.jpg" alt="Simulation Environments">
+      <div class="figure-description">
+        <strong>Figure 3: Heterogeneous Multi-Agent Simulation Environments.</strong> We evaluated HALYPO across various challenging HRC scenarios, including collaborative transport and dynamic obstacle avoidance. The diverse set of tasks tests the agent's ability to generalize to unseen human motion patterns and dynamical perturbations.
       </div>
-      <div class="image-item">
-        <img src="static/images/fig4.jpg" alt="Results">
-        <p class="subtitle is-6">Performance Comparison</p>
+    </div>
+
+    <div class="figure-block">
+      <img src="static/images/results_chart.jpg" alt="Experimental Results">
+      <div class="figure-description">
+        <strong>Figure 4: Quantitative Performance Metrics.</strong> HALYPO consistently outperforms baselines in terms of success rate and efficiency. The results highlight the importance of formal stability certification in stabilizing the learning process for heterogeneous multi-agent systems.
       </div>
     </div>
   </div>
@@ -124,55 +147,55 @@
 
 <section class="section is-light">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Experimental Demonstrations</h2>
+    <h2 class="title is-3 section-title has-text-centered">Experimental Demonstrations</h2>
     <div class="video-grid">
       <div class="video-item">
-        <video controls muted loop><source src="static/videos/v1.mp4" type="video/mp4"></video>
-        <p>Scenario 1</p>
+        <video controls muted loop><source src="static/videos/video1.mp4" type="video/mp4"></video>
+        <div class="video-caption">Scenario 1: Collaborative Transport</div>
       </div>
       <div class="video-item">
-        <video controls muted loop><source src="static/videos/v2.mp4" type="video/mp4"></video>
-        <p>Scenario 2</p>
+        <video controls muted loop><source src="static/videos/video2.mp4" type="video/mp4"></video>
+        <div class="video-caption">Scenario 2: Obstacle Avoidance</div>
       </div>
       <div class="video-item">
-        <video controls muted loop><source src="static/videos/v3.mp4" type="video/mp4"></video>
-        <p>Scenario 3</p>
+        <video controls muted loop><source src="static/videos/video3.mp4" type="video/mp4"></video>
+        <div class="video-caption">Scenario 3: Intent Prediction</div>
       </div>
       <div class="video-item">
-        <video controls muted loop><source src="static/videos/v4.mp4" type="video/mp4"></video>
-        <p>Scenario 4</p>
+        <video controls muted loop><source src="static/videos/video4.mp4" type="video/mp4"></video>
+        <div class="video-caption">Scenario 4: Load Balancing</div>
       </div>
       <div class="video-item">
-        <video controls muted loop><source src="static/videos/v5.mp4" type="video/mp4"></video>
-        <p>Scenario 5</p>
+        <video controls muted loop><source src="static/videos/video5.mp4" type="video/mp4"></video>
+        <div class="video-caption">Scenario 5: Dynamic Interaction</div>
       </div>
       <div class="video-item">
-        <video controls muted loop><source src="static/videos/v6.mp4" type="video/mp4"></video>
-        <p>Scenario 6</p>
+        <video controls muted loop><source src="static/videos/video6.mp4" type="video/mp4"></video>
+        <div class="video-caption">Scenario 6: Robust Handover</div>
       </div>
       <div class="video-item">
-        <video controls muted loop><source src="static/videos/v7.mp4" type="video/mp4"></video>
-        <p>Scenario 7</p>
+        <video controls muted loop><source src="static/videos/video7.mp4" type="video/mp4"></video>
+        <div class="video-caption">Scenario 7: Adaptive Gait</div>
       </div>
       <div class="video-item">
-        <video controls muted loop><source src="static/videos/v8.mp4" type="video/mp4"></video>
-        <p>Scenario 8</p>
+        <video controls muted loop><source src="static/videos/video8.mp4" type="video/mp4"></video>
+        <div class="video-caption">Scenario 8: Shared Workspace</div>
       </div>
       <div class="video-item">
-        <video controls muted loop><source src="static/videos/v9.mp4" type="video/mp4"></video>
-        <p>Scenario 9</p>
+        <video controls muted loop><source src="static/videos/video9.mp4" type="video/mp4"></video>
+        <div class="video-caption">Scenario 9: Human-in-the-Loop</div>
       </div>
       <div class="video-item">
-        <video controls muted loop><source src="static/videos/v10.mp4" type="video/mp4"></video>
-        <p>Scenario 10</p>
+        <video controls muted loop><source src="static/videos/video10.mp4" type="video/mp4"></video>
+        <div class="video-caption">Scenario 10: Multi-Task Transfer</div>
       </div>
       <div class="video-item">
-        <video controls muted loop><source src="static/videos/v11.mp4" type="video/mp4"></video>
-        <p>Scenario 11</p>
+        <video controls muted loop><source src="static/videos/video11.mp4" type="video/mp4"></video>
+        <div class="video-caption">Scenario 11: Resilience Test</div>
       </div>
       <div class="video-item">
-        <video controls muted loop><source src="static/videos/v12.mp4" type="video/mp4"></video>
-        <p>Scenario 12</p>
+        <video controls muted loop><source src="static/videos/video12.mp4" type="video/mp4"></video>
+        <div class="video-caption">Scenario 12: Real-World Deployment</div>
       </div>
     </div>
   </div>
@@ -182,8 +205,9 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{zhang2024halypo,
-  title={HALYPO: Heterogeneous-Agent Lyapunov Policy Optimization for Human-Robot Collaboration},
+  title={Learning Human-Robot Collaboration via Heterogeneous-Agent Lyapunov Policy Optimization},
   author={Zhang, Hao and Niu, Yaru and Wang, Yikai and Zhao, Ding and Tseng, H. Eric},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
   year={2024}
 }</code></pre>
   </div>
@@ -191,10 +215,9 @@
 
 <footer class="footer">
   <div class="content has-text-centered">
-    <p>Template based on Nerfies project page.</p>
+    <p>Academic Project Page Template for HALYPO Research.</p>
   </div>
 </footer>
 
 </body>
 </html>
-  </html>
