@@ -95,7 +95,7 @@
         <source src="static/videos/main_teaser.mp4" type="video/mp4">
       </video>
       <p class="has-text-centered mt-3 is-size-6 has-text-grey">
-        Overall demonstration of HALYPO in high-dimensional human-robot interaction tasks.
+        Overall demonstration of HALyPO in high-dimensional human-robot interaction tasks.
       </p>
     </div>
   </div>
@@ -108,7 +108,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            To improve generalization and resilience in human-robot collaboration (HRC), robots must handle the combinatorial diversity of human behaviors and contexts. We propose <strong>Heterogeneous-Agent Lyapunov Policy Optimization (HALYPO)</strong>, which establishes formal stability directly in the policy-parameter space by enforcing a per-step Lyapunov decrease condition on a parameter-space disagreement metric. Unlike Lyapunov-based safe RL, HALYPO uses Lyapunov certification to stabilize decentralized policy learning. Our method ensures monotonic contraction of the rationality gap and enables effective exploration of open-ended interaction spaces. Extensive simulations and real-world humanoid-robot experiments demonstrate superior stability and performance compared to state-of-the-art MARL baselines.
+            To improve generalization and resilience in human-robot collaboration (HRC), robots must handle the combinatorial diversity of human behaviors and contexts. We propose <strong>Heterogeneous-Agent Lyapunov Policy Optimization (HALyPO)</strong>, which establishes formal stability directly in the policy-parameter space by enforcing a per-step Lyapunov decrease condition on a parameter-space disagreement metric. Unlike Lyapunov-based safe RL, HALyPO uses Lyapunov certification to stabilize decentralized policy learning. Our method ensures monotonic contraction of the rationality gap and enables effective exploration of open-ended interaction spaces. Extensive simulations and real-world humanoid-robot experiments demonstrate superior stability and performance compared to state-of-the-art MARL baselines.
           </p>
         </div>
       </div>
@@ -121,16 +121,16 @@
     <h2 class="title is-3 section-title has-text-centered">Methodology & Framework</h2>
     
     <div class="figure-block">
-      <img src="static/images/framework.jpg" alt="HALYPO Framework">
+      <img src="static/images/framework.jpg" alt="HALyPO Framework">
       <div class="figure-description">
-        <strong>Figure 1: Overview of the HALYPO Framework.</strong> The architecture illustrates how heterogeneous agents (Human Proxy and Robot) interact within a decentralized environment. HALYPO introduces a Lyapunov-based projection layer that rectifies decentralized gradients, ensuring stable convergence towards the cooperative Nash equilibrium even under highly stochastic human behaviors.
+        <strong>Figure 1: Overview of the HALyPO Framework.</strong> The architecture illustrates how heterogeneous agents (Human Proxy and Robot) interact within a decentralized environment. HALyPO introduces a Lyapunov-based projection layer that rectifies decentralized gradients, ensuring stable convergence towards the cooperative Nash equilibrium even under highly stochastic human behaviors.
       </div>
     </div>
 
     <div class="figure-block">
       <img src="static/images/stability_proof.jpg" alt="Stability Proof">
       <div class="figure-description">
-        <strong>Figure 2: Parameter-Space Stability Analysis.</strong> Comparison of learning dynamics between standard IPPO and HALYPO. While independent updates often lead to oscillations in the Rationality Gap (RG), our Lyapunov descent condition forces a monotonic decrease in policy disagreement, leading to smoother and faster convergence in complex differentiable games.
+        <strong>Figure 2: Parameter-Space Stability Analysis.</strong> Comparison of learning dynamics between standard IPPO and HALyPO. While independent updates often lead to oscillations in the Rationality Gap (RG), our Lyapunov descent condition forces a monotonic decrease in policy disagreement, leading to smoother and faster convergence in complex differentiable games.
       </div>
     </div>
   </div>
@@ -197,14 +197,14 @@
     <div class="figure-block">
       <img src="static/images/sim_setup.jpg" alt="Simulation Environments">
       <div class="figure-description">
-        <strong>Figure 3: Heterogeneous Multi-Agent Simulation Environments.</strong> We evaluated HALYPO across various challenging HRC scenarios, including collaborative transport and dynamic obstacle avoidance.
+        <strong>Figure 3: Heterogeneous Multi-Agent Simulation Environments.</strong> We evaluated HALyPO across various challenging HRC scenarios, including collaborative transport and dynamic obstacle avoidance.
       </div>
     </div>
 
     <div class="figure-block">
       <img src="static/images/results_chart.jpg" alt="Experimental Results">
       <div class="figure-description">
-        <strong>Figure 4: Quantitative Performance Metrics.</strong> HALYPO consistently outperforms baselines in terms of success rate and efficiency.
+        <strong>Figure 4: Quantitative Performance Metrics.</strong> HALyPO consistently outperforms baselines in terms of success rate and efficiency.
       </div>
     </div>
   </div>
@@ -213,7 +213,7 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{zhang2024halypo,
+    <pre><code>@article{zhang2024HALyPO,
   title={HALyPO: Heterogeneous-Agent Lyapunov Policy Optimization for Human-Robot Collaboration},
   author={Zhang, Hao and Niu, Yaru and Wang, Yikai and Zhao, Ding and Tseng, H. Eric},
   journal={arXiv preprint arXiv:XXXX.XXXXX},
@@ -224,7 +224,7 @@
 
 <footer class="footer">
   <div class="content has-text-centered">
-    <p>Academic Project Page Template for HALYPO Research.</p>
+    <p>Academic Project Page Template for HALyPO Research.</p>
   </div>
 </footer>
 
