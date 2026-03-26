@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>HALyPO: Heterogeneous-Agent Lyapunov Policy Optimization for Human-Robot Collaboration</title>
+  <title>Learning Human-Robot Collaboration via Heterogeneous-Agent Lyapunov Policy Optimization</title>
 
 
 
@@ -118,34 +118,27 @@
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop has-text-centered">
-      <h1 class="title is-1 publication-title">HALyPO: Heterogeneous-Agent Lyapunov Policy Optimization for Human-Robot Collaboration</h1>
+      <h1 class="title is-1 publication-title">Learning Human-Robot Collaboration via Heterogeneous-Agent Lyapunov Policy Optimization</h1>
+      
       <div class="is-size-5 publication-authors">
-        <span class="author-block">Hao Zhang<sup>1,2</sup>, Yaru Niu<sup>2</sup>, Yikai Wang<sup>2</sup>, Ding Zhao<sup>2</sup>, H. Eric Tseng<sup>1</sup></span>
+        <span class="author-block">Anonymous Authors</span>
       </div>
       <div class="is-size-6 mt-2">
-        <span><sup>1</sup>The University of Texas at Arlington, <sup>2</sup>Carnegie Mellon University</span>
+        <span>Paper ID: 17140</span>
       </div>
 
       <div class="column has-text-centered">
         <div class="publication-links">
           <span class="link-block">
-            <a href="https://arxiv.org/abs/2603.03741" class="external-link button is-normal is-rounded is-dark">
-              <span class="icon"><i class="ai ai-arxiv"></i></span>
-              <span>arXiv</span>
-            </a>
-          </span>
-          <span class="link-block">
-            <a href="static/pdfs/paper.pdf" class="external-link button is-normal is-rounded is-dark">
+            <a href="#" class="external-link button is-normal is-rounded is-dark">
               <span class="icon"><i class="fas fa-file-pdf"></i></span>
-              <span>Paper</span>
+              <span>Anonymous Paper</span>
             </a>
           </span>
-          <!-- <span class="link-block">
-            <a href="https://github.com/YourUsername/HALyPO" class="external-link button is-normal is-rounded is-dark">
-              <span class="icon"><i class="fab fa-github"></i></span>
-              <span>Code</span>
-            </a>
-          </span> -->
+          </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 
@@ -172,48 +165,6 @@
         Overall demonstration of HALyPO in human-robot collaboration tasks.
 
 </section>
-
-
-
-<section class="section">
-
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered has-text-centered">
-
-      <div class="column is-four-fifths">
-
-        <h2 class="title is-3">Abstract</h2>
-
-        <div class="content has-text-justified">
-
-          <p>
-
-            To improve generalization and resilience in human–robot collaboration (HRC), robots must handle the combinatorial diversity of human behaviors and contexts, motivating multi-agent reinforcement learning (MARL). However, inherent heterogeneity between robots and humans creates a rationality gap (RG) in the learning process--a variational mismatch between decentralized best-response dynamics and centralized cooperative ascent. The resulting learning problem is a general-sum differentiable game, so independent policy-gradient updates can oscillate or diverge without added structure. We propose heterogeneous-agent Lyapunov policy optimization (HALyPO), which establishes formal stability directly in the policy-parameter space by enforcing a per-step Lyapunov decrease condition on a parameter-space disagreement metric. Unlike Lyapunov-based safe RL, which targets state/trajectory constraints in constrained Markov decision processes, HALyPO uses Lyapunov certification to stabilize decentralized policy learning. HALyPO rectifies decentralized gradients via optimal quadratic projections, ensuring monotonic contraction of RG and enabling effective exploration of open-ended interaction spaces. Extensive simulations and real-world humanoid-robot experiments show that this certified stability improves generalization and robustness in collaborative corner cases.
-            
-          </p>
-
-</section>
-
-
-
-
-
-  
-
-<section class="section">
-
-    <div class="figure-block">
-
-      <img src="static/images/results_chart.jpg" alt="Experimental Results">
-
-      <div class="figure-description">
-
-        <strong>Figure 1: Sim-to-Real Deployment Across Embodied Tasks</strong>: macro-view of deployment on OSP (top), SCT (Middle) and SLH (Bottom). Temporal progression is indicated by color gradients; arrows trace the stable trajectories maintained by HALyPO despite complex physical coupling and human-induced perturbations.
-
-</section>
-
-
 
 
 
@@ -280,30 +231,6 @@
 
 
 
-
-  
-
-<section class="section">
-
-  <div class="container is-max-desktop">
-
-    <h2 class="title is-3 section-title has-text-centered">HALyPO Methodology & Framework</h2>
-
-    
-
-    <div class="figure-block">
-
-      <img src="static/images/framework.jpg" alt="HALyPO Framework">
-
-      <div class="figure-description">
-
-        <strong>Figure 2: Overview of the HALyPO Methodology and Framework.</strong> This architecture combining the transition from standard decentralized learning to Lyapunov policy optimization for real-world HRC. Key components include the computation of the rationality gap and the stability normal vector to derive the final analytic closed-form projection.
-</section>
-
-
-
-
-
 <section class="section">
 
   <div class="container is-max-desktop">
@@ -312,50 +239,20 @@
 
     <div class="video-grid">
 
+
       <div class="video-item">
 
-        <video autoplay muted loop playsinline><source src="static/videos/video5.mp4" type="video/mp4"></video>
+        <video autoplay muted loop playsinline><source src="static/videos/video11.mp4" type="video/mp4"></video>
 
-        <div class="video-caption">Scenario B.1: Spatially-confined transport</div>
+        <div class="video-caption">Scenario B.1: Movement synchronization: obstruction resilience</div>
 
       </div>
 
       <div class="video-item">
 
-        <video autoplay muted loop playsinline><source src="static/videos/video6.mp4" type="video/mp4"></video>
+        <video autoplay muted loop playsinline><source src="static/videos/video12.mp4" type="video/mp4"></video>
 
-        <div class="video-caption">Scenario B.2: Spatially-confined transport</div>
-
-      </div>
-
-      <div class="video-item">
-
-        <video autoplay muted loop playsinline><source src="static/videos/video7.mp4" type="video/mp4"></video>
-
-        <div class="video-caption">Scenario B.3: Spatially-confined transport</div>
-
-      </div>
-
-      <div class="video-item">
-
-        <video autoplay muted loop playsinline><source src="static/videos/video8.mp4" type="video/mp4"></video>
-
-        <div class="video-caption">Scenario B.4: Spatially-confined transport</div>
-
-      </div>
-      <div class="video-item">
-
-        <video autoplay muted loop playsinline><source src="static/videos/video13.mp4" type="video/mp4"></video>
-
-        <div class="video-caption">Scenario B.5: Super-long object handling</div>
-
-      </div>
-
-      <div class="video-item">
-
-        <video autoplay muted loop playsinline><source src="static/videos/video14.mp4" type="video/mp4"></video>
-
-        <div class="video-caption">Scenario B.6: Super-long object handling</div>
+        <div class="video-caption">Scenario B.2: Vertical synchronization: adaptive squatting</div>
 
       </div>
 
@@ -364,22 +261,7 @@
 </section>
 
 
-
-<section class="section">
-
-  <div class="container is-max-desktop">
-
-    <h2 class="title is-3 section-title has-text-centered">Cognition to Control (C2C) Framework</h2>
-
-    <div class="figure-block">
-
-      <img src="static/images/stability_proof.jpg" alt="Stability Proof">
-
-      <div class="figure-description">
-
-        <strong>Figure 3: Cognition to Control Framework for HRC.</strong> The proposed hierarchical HRC framework for humanoid-object coordination, partitioning decision-making into three cascade layers: a cognition layer (VLM) generates semantic-aware object moving direction (anchors) from visual input; a skill policy layer (MARL), where agents maintain independent, to derive tactical coordination commands; and a cerebellum Layer (WBC) for high-frequency whole-body stabilization and joint-level execution.
-</section>
-
+  
 
 
 <section class="section">
@@ -390,20 +272,50 @@
 
     <div class="video-grid">
 
-
       <div class="video-item">
 
-        <video autoplay muted loop playsinline><source src="static/videos/video11.mp4" type="video/mp4"></video>
+        <video autoplay muted loop playsinline><source src="static/videos/video5.mp4" type="video/mp4"></video>
 
-        <div class="video-caption">Scenario C.1: Movement synchronization: obstruction resilience</div>
+        <div class="video-caption">Scenario C.1: Spatially-confined transport</div>
 
       </div>
 
       <div class="video-item">
 
-        <video autoplay muted loop playsinline><source src="static/videos/video12.mp4" type="video/mp4"></video>
+        <video autoplay muted loop playsinline><source src="static/videos/video6.mp4" type="video/mp4"></video>
 
-        <div class="video-caption">Scenario C.2: Vertical synchronization: adaptive squatting</div>
+        <div class="video-caption">Scenario C.2: Spatially-confined transport</div>
+
+      </div>
+
+      <div class="video-item">
+
+        <video autoplay muted loop playsinline><source src="static/videos/video7.mp4" type="video/mp4"></video>
+
+        <div class="video-caption">Scenario C.3: Spatially-confined transport</div>
+
+      </div>
+
+      <div class="video-item">
+
+        <video autoplay muted loop playsinline><source src="static/videos/video8.mp4" type="video/mp4"></video>
+
+        <div class="video-caption">Scenario C.4: Spatially-confined transport</div>
+
+      </div>
+      <div class="video-item">
+
+        <video autoplay muted loop playsinline><source src="static/videos/video13.mp4" type="video/mp4"></video>
+
+        <div class="video-caption">Scenario C.5: Super-long object handling</div>
+
+      </div>
+
+      <div class="video-item">
+
+        <video autoplay muted loop playsinline><source src="static/videos/video14.mp4" type="video/mp4"></video>
+
+        <div class="video-caption">Scenario C.6: Super-long object handling</div>
 
       </div>
 
@@ -411,42 +323,10 @@
 
 </section>
 
-
-
-<section class="section">
-
-  <div class="container is-max-desktop">
-
-    <div class="figure-block">
-
-      <img src="static/images/sim_setup.jpg" alt="Simulation Environments">
-
-      <div class="figure-description">
-
-        <strong>Figure 4: Simulation Benchmark and Performance Matrix.</strong> Comprehensive performance matrix and global optimization analysis of heterogeneous coordination: the upper part evaluates the scenario-specific success rate across nine representative coordination challenges in OSP, SCT and SLH tasks, reported as mean std. The lower part provides a synchronized mechanism analysis at the 2B-step steady state, correlating overall task proficiency with fundamental optimization metrics including Overall success rate, convergence, final return, gradient alignment, rationality gap and gradient conflict rate. Bold and underlined indicate first and second best, respectively.
-        
-      </div>
-
-  </div>
-
-</section>
 
 
 
 <section class="section" id="BibTeX">
-
-  <div class="container is-max-desktop content">
-
-    <h2 class="title">BibTeX</h2>
-
-    <pre><code>@article{zhang2026halypo,
-  title={HALyPO: Heterogeneous-Agent Lyapunov Policy Optimization for Human-Robot Collaboration},
-  author={Zhang, Hao and Niu, Yaru and Wang, Yikai and Zhao, Ding and Tseng, H Eric},
-  journal={arXiv preprint arXiv:2603.03741},
-  year={2026}
-}</code></pre>
-
-  </div>
 
 </section>
 
@@ -465,7 +345,7 @@
 
   <div class="content has-text-centered">
 
-    <p>Academic Project Page Template for HALyPO Research.</p>
+    <p>Anonymous Project Page for ICML Rebuttal.</p>
 
   </div>
 
